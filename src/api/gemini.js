@@ -1,12 +1,12 @@
 const API_KEY = import.meta.env.VITE_NVIDIA_API_KEY || import.meta.env.VITE_GROQ_API_KEY;
-const API_URL = import.meta.env.DEV ? '/api-nvidia/v1/chat/completions' : 'https://integrate.api.nvidia.com/v1/chat/completions';
+const API_URL = '/api/chat';
 const MODEL = 'z-ai/glm-5.2';
 
 /**
  * Send a prompt to NVIDIA API and get the response text
  */
 async function callAI(prompt) {
-  if (!API_KEY || API_KEY === 'your_api_key_here') {
+  if (import.meta.env.DEV && (!API_KEY || API_KEY === 'your_api_key_here')) {
     throw new Error('Please set your NVIDIA API key in the .env file (VITE_NVIDIA_API_KEY)');
   }
 
@@ -37,6 +37,7 @@ async function callAI(prompt) {
  * Check if the API key is configured
  */
 export function isAPIConfigured() {
+  if (import.meta.env.PROD) return true;
   return API_KEY && API_KEY !== 'your_api_key_here';
 }
 
