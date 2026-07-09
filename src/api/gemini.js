@@ -1,5 +1,5 @@
 const API_KEY = import.meta.env.VITE_NVIDIA_API_KEY || import.meta.env.VITE_GROQ_API_KEY;
-const API_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
+const API_URL = import.meta.env.DEV ? '/api-nvidia/v1/chat/completions' : 'https://integrate.api.nvidia.com/v1/chat/completions';
 const MODEL = 'z-ai/glm-5.2';
 
 /**
