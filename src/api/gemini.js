@@ -1,6 +1,6 @@
 const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
-const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
-const MODEL = 'llama-3.3-70b-versatile';
+const API_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
+const MODEL = 'z-ai/glm-5.2';
 
 /**
  * Send a prompt to Groq API and get the response text
