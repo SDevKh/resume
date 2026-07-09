@@ -1,13 +1,13 @@
-const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
-const API_URL = 'https://integrate.api.nvidia.com/v1';
+const API_KEY = import.meta.env.VITE_NVIDIA_API_KEY || import.meta.env.VITE_GROQ_API_KEY;
+const API_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
 const MODEL = 'z-ai/glm-5.2';
 
 /**
- * Send a prompt to Groq API and get the response text
+ * Send a prompt to NVIDIA API and get the response text
  */
 async function callAI(prompt) {
   if (!API_KEY || API_KEY === 'your_api_key_here') {
-    throw new Error('Please set your Groq API key in the .env file (VITE_GROQ_API_KEY)');
+    throw new Error('Please set your NVIDIA API key in the .env file (VITE_NVIDIA_API_KEY)');
   }
 
   const response = await fetch(API_URL, {

@@ -27,9 +27,9 @@ export function renderDashboard(container, appState) {
             <div>
               <h4 style="color: var(--accent-warning); margin-bottom: 4px;">API Key Required</h4>
               <p style="font-size: 0.85rem; color: var(--text-secondary);">
-                Add your free Groq API key to <code style="background: var(--bg-input); padding: 2px 6px; border-radius: 4px;">.env</code> file: 
-                <code style="background: var(--bg-input); padding: 2px 6px; border-radius: 4px;">VITE_GROQ_API_KEY=your_key</code>
-                <br>Get a free key at <a href="https://console.groq.com/keys" target="_blank" style="color: var(--accent-primary-light);">console.groq.com/keys</a>
+                Add your NVIDIA API key to <code style="background: var(--bg-input); padding: 2px 6px; border-radius: 4px;">.env</code> file: 
+                <code style="background: var(--bg-input); padding: 2px 6px; border-radius: 4px;">VITE_NVIDIA_API_KEY=your_key</code>
+                <br>Get a key at <a href="https://build.nvidia.com/" target="_blank" style="color: var(--accent-primary-light);">build.nvidia.com</a>
               </p>
             </div>
           </div>

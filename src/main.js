@@ -180,7 +180,7 @@ function enterApp() {
   const apiStatus = document.querySelector('#api-status');
   if (isAPIConfigured()) {
     apiStatus.classList.add('connected');
-    apiStatus.querySelector('span').textContent = 'Groq API Connected';
+    apiStatus.querySelector('span').textContent = 'NVIDIA API Connected';
   }
 
   // Setup nav click handlers

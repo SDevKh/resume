@@ -17,7 +17,7 @@ export function renderCareerPath(container, appState) {
         container.innerHTML = `
             <div class="fade-in card" style="text-align: center; padding: 40px 20px;">
                 <h2 style="margin-bottom: 16px;">API Key Required</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 24px;">Please add your Groq API key to the .env file to generate career insights.</p>
+                <p style="color: var(--text-secondary); margin-bottom: 24px;">Please add your NVIDIA API key to the .env file to generate career insights.</p>
                 <button class="btn btn-primary" onclick="window.navigateTo('dashboard')">Go Back</button>
             </div>
         `;
